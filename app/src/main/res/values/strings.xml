@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">紅綠燈(黃浚泰)</string>
+    <string name="message">請輸入綠燈秒數</string>
+    <string name="message1">請輸入黃燈秒數</string>
+    <string name="message2">請輸入紅燈秒數</string>
+    <string name="red_name">輸入綠燈的秒數</string>
+    <string name="green_name">輸入黃燈的秒數</string>
+    <string name="yellow_name">輸入紅燈的秒數</string>
 </resources>

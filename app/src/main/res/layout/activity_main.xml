@@ -11,9 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"  />
+        app:layout_constraintGuide_percent="0.2" />
+
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="紅綠燈(作者：靜宜大學資管系黃浚泰)"
@@ -21,6 +23,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gl1" />
+
+
+    <EditText
+        android:id="@+id/ed_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/red_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ed_yel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_gre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/green_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ed_yel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_yel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/yellow_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ed_gre"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ed_red"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl2"
         android:layout_width="wrap_content"
@@ -36,9 +75,9 @@
         android:text="開始遊戲"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/gl2"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnEnd"
-        app:layout_constraintHorizontal_chainStyle="packed"/>
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEnd"

@@ -38,13 +38,12 @@ public class GameActivity extends AppCompatActivity {
     }
 
     //利用手指觸控，控制小男孩走路
-    public boolean onTouchEvent (MotionEvent event){
-        if (event.getAction() == MotionEvent.ACTION_DOWN){
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY){
+        if (e1.getAction() == MotionEvent.ACTION_DOWN) {
             GameSV.BoyMoving = true;
             handler.post(runnable);
-        }
-        else if (event.getAction() == MotionEvent.ACTION_UP){
-            GameSV.BoyMoving =  false;
+        } else if (e1.getAction() == MotionEvent.ACTION_UP) {
+            GameSV.BoyMoving = false;
             handler.removeCallbacks(runnable);  //銷毀執行緒
         }
         return true;
